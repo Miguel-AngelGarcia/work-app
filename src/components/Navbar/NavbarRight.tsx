@@ -4,14 +4,14 @@ import { CustomIcon } from '..';
 
 const NavbarRight = () => {
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex justify-center items-center gap-1">
       {rightNavbarData.map((menuIcon) => (
         <div className="md-icon-cont" key={menuIcon.text}>
           <button className="rounded btn h-[40px] w-[40px]">
             <CustomIcon
               src={menuIcon.link}
               alt={`${menuIcon.text} icon`}
-              size="md"
+              size="sm"
             />
           </button>
         </div>
