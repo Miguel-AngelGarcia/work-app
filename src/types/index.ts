@@ -26,4 +26,5 @@ export interface CustomButtonProps {
   btnStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: 'button' | 'submit';
+  icon: boolean; //true if icon will be needed
 }

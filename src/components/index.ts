@@ -4,6 +4,8 @@ import ScheduleTable from './ScheduleTable';
 import AddColumnModal from './AddColumnModal';
 import Navbar from './Navbar/Navbar';
 import CustomIcon from './CustomIcon';
+import Sidebar from './Sidebar/Sidebar';
+import MainContent from './MainContent';
 
 export {
   ProjectForm,
@@ -12,4 +14,6 @@ export {
   AddColumnModal,
   Navbar,
   CustomIcon,
+  Sidebar,
+  MainContent,
 };

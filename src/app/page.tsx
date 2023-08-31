@@ -1,5 +1,10 @@
 import Image from 'next/image';
-import { ProjectForm, AddColumnModal } from '@/components';
+import {
+  ProjectForm,
+  AddColumnModal,
+  Sidebar,
+  MainContent,
+} from '@/components';
 import React from 'react';
 
 export default function Home() {
@@ -8,6 +13,9 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <div className="below-nav">
+      <Sidebar />
+      <MainContent />
+    </div>
   );
 }
