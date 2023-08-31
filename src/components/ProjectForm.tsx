@@ -6,7 +6,7 @@ const ProjectForm = () => {
   return (
     <div className="form-group flex flex-col">
       <div className="form-group-content flex flex-col">
-        <div className="form-group-container flex flex-col p-6">
+        <div className="form-group-container flex flex-col p-6 relative">
           <div>
             <h1 className="title">Project Name</h1>
           </div>

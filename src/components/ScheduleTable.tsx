@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import AddColumnModal from './AddColumnModal';
 
 const ScheduleTable = () => {
   const defaultTable = [
@@ -36,7 +37,7 @@ const ScheduleTable = () => {
             <th className="align-bottom selector-box">Status</th>
             <th className="align-bottom selector-box">Priority</th>
             <th className="align-bottom tag-box">Tag</th>
-            <th className="relative object-contain">
+            <th className="object-contain add-col">
               <a className="add-icon">
                 <Image
                   src="/plusIcon.svg"
@@ -46,6 +47,9 @@ const ScheduleTable = () => {
                   className="object-contain"
                 />
               </a>
+              <div className="help">
+                <AddColumnModal />
+              </div>
             </th>
           </tr>
         </thead>

@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+import React, { use } from 'react';
+import { MouseEventHandler } from 'react';
+import CustomIcon from './CustomIcon';
 
 import Image from 'next/image';
 
@@ -12,21 +15,21 @@ const AddColumnModal = () => {
     { link: '/poundSign.svg', text: 'tags' },
   ];
 
+  const handleClick = () => {
+    console.log('hi');
+  };
+
   return (
-    <div className="bg-white text-black ac-modal h-[400px] w-[200px] rounded-xl flex flex-col p-[10px]">
+    <div className="bg-white text-black ac-modal h-[400px] w-[200px] rounded-xl flex flex-col p-[10px] z-10">
       <div className="flex flex-col ac-modal gap-y-1">
         {data.map((button) => (
-          <a href="#" key={button.text}>
+          <a href="#" key={button.text} onClick={handleClick}>
             <div className="flex flex-row m-div">
-              <div className="icon-container">
-                <Image
-                  src={button.link}
-                  alt={`${button.text} icon`}
-                  height={40}
-                  width={40}
-                  className="object-contain"
-                />
-              </div>
+              <CustomIcon
+                src={button.link}
+                alt={button.text}
+                size="md"
+              ></CustomIcon>
               <p className="capitalize">{button.text}</p>
             </div>
           </a>
@@ -121,4 +124,30 @@ export default AddColumnModal;
         </div>
       </div>
     </div>
-  );*/
+  );
+  
+  OLDV2
+  
+  return (
+    <div className="bg-white text-black ac-modal h-[400px] w-[200px] rounded-xl flex flex-col p-[10px] z-10">
+      <div className="flex flex-col ac-modal gap-y-1">
+        {data.map((button) => (
+          <a href="#" key={button.text} onClick={handleClick}>
+            <div className="flex flex-row m-div">
+              <div className="icon-container">
+                <Image
+                  src={button.link}
+                  alt={`${button.text} icon`}
+                  height={40}
+                  width={40}
+                  className="object-contain"
+                />
+              </div>
+              <p className="capitalize">{button.text}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+  */
