@@ -282,6 +282,22 @@ td.tag-box {
   max-height: 30px;
 }
 
+/*CustomIcon sizes*/
+.custom-icon-xs {
+  max-width: 12px;
+  max-height: 12px;
+}
+
+.custom-icon-sm {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.custom-icon-md {
+  max-width: 30px;
+  max-height: 30px;
+}
+
 .help {
   position: absolute;
   z-index: 999;
@@ -309,8 +325,9 @@ td.tag-box {
 .btn {
 }
 
-.btn:hover {
-  background-color: aquamarine;
+.btn:hover,
+.btn:focus {
+  background-color: lightgray;
 }
 
 /*Body below navbar*/
@@ -349,6 +366,7 @@ td.tag-box {
   width: 100%;
   opacity: 1;
   visibility: visible;
+  overflow: auto;
 }
 
 .bg-comp {
@@ -378,7 +396,7 @@ td.tag-box {
 
 .btnStyle {
   border: none;
-  outline: none;
+  /*outline: none;*/
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
@@ -391,18 +409,22 @@ td.tag-box {
   padding-left: 8px;
 }
 
-.bt-t:hover {
+.bt-t:hover,
+.bt-t:focus {
   background-color: lightgray;
 }
 
 .searchbox-cont {
   display: flex;
   padding-right: 16px;
-  padding-bottom: 8px;
+  padding-bottom: 0px;
   padding-left: 10px;
   width: 100%;
-  height: 40px;
+  height: 32px;
 }
+/*Changed above height from 40 -> 32 because we want there to be 12px of 
+space between each component.  sb-bot-comp has top padding of 12px. [padding-block: 12px]
++ */
 
 .searchbox {
   margin: 0;
@@ -463,4 +485,67 @@ td.tag-box {
   top: 0;
   opacity: 1;
   transition: 0s;
+}
+
+/*Main content*/
+
+.header {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 3px 12px lightgray;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+}
+
+.component-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-color: transparent;
+}
+
+.main-panel-cont {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-right: 24px;
+  width: calc(100% - 300px - 24px);
+}
+
+.body-section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin-top: 16px;
+  border: 8px;
+  box-shadow: 0x 3px 12px lightgray;
+  border-radius: 8px;
+}
+
+.test-info {
+  height: 200px;
+  width: 200px;
+}
+
+/*Collapsible body stuff*/
+.collaps-header {
+  display: flex;
+  align-items: center;
+  margin: 24px;
+  height: 24px;
+}
+
+.collaps-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 4px;
+  display: inline-block;
+  line-height: 20px;
 }
