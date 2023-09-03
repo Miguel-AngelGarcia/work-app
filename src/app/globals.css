@@ -298,6 +298,11 @@ td.tag-box {
   max-height: 30px;
 }
 
+.custom-icon-lg {
+  max-width: 40px;
+  max-height: 40px;
+}
+
 .help {
   position: absolute;
   z-index: 999;
@@ -532,13 +537,18 @@ space between each component.  sb-bot-comp has top padding of 12px. [padding-blo
 .test-info {
   height: 200px;
   width: 200px;
+  background-color: antiquewhite;
 }
 
 /*Collapsible body stuff*/
+.collapsible-content {
+  margin: 24px;
+}
+
 .collaps-header {
   display: flex;
   align-items: center;
-  margin: 24px;
+
   height: 24px;
 }
 
@@ -548,4 +558,92 @@ space between each component.  sb-bot-comp has top padding of 12px. [padding-blo
   margin-left: 4px;
   display: inline-block;
   line-height: 20px;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+.quick-search-cards-list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 16px 16px 24px 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-all-btn {
+  height: 32px;
+  line-height: 24px;
+  border-radius: 4px;
+  width: 68px;
+  padding: 4px 8px 4px 8px;
+  font-size: 13px;
+}
+
+.uf-container {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  border: 1.5px solid lightgray;
+  border-radius: 8px;
+}
+
+/*Update Feed */
+.uf .posts {
+}
+
+.post-card-component {
+  display: flex;
+  padding: 0px 30px;
+  height: 72px;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-user-name {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.post-user-name .text-part {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-content-body {
+  flex: 1 1 auto;
+  margin-right: 12px;
+  overflow: hidden;
+}
+
+.p-c-body-text {
+  font-weight: 400px;
+  text-overflow: unset;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: break-spaces;
+  line-height: 18px;
+  pointer-events: none;
+  cursor: default;
+  height: 20px;
+}
+
+.line-sep {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.line-sep .line-sep-inner {
+  border-bottom: 1.5px solid lightgray;
 }
