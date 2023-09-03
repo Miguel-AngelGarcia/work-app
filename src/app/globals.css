@@ -647,3 +647,15 @@ space between each component.  sb-bot-comp has top padding of 12px. [padding-blo
 .line-sep .line-sep-inner {
   border-bottom: 1.5px solid lightgray;
 }
+
+/*workspaces*/
+.workspaces-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 5fr 5fr;
+  grid-gap: 20px;
+  column-gap: 20px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+}

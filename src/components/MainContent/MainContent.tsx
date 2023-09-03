@@ -27,7 +27,7 @@ const MainContent = () => {
                   title={`Update feed (Inbox) ${2}`}
                   component={uf}
                 />
-                <CustomCollapsible title={'My workspaces'} component={rv} />
+                <CustomCollapsible title={'My workspaces'} component={mw} />
               </div>
             </div>
           </div>
@@ -96,4 +96,22 @@ export const uf = (
       </div>
     </div>
   </div>
+);
+
+export const mw = (
+  <span className="expandable-section-comp">
+    <div className="my-workspaces-comp">
+      <div className="workspaces-list">
+        <div className="flex items-center justify-center">
+          <div className="test-info"></div>
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="test-info"></div>
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="test-info"></div>
+        </div>
+      </div>
+    </div>
+  </span>
 );
